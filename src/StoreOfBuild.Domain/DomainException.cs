@@ -1,15 +1,17 @@
+using System;
+
 namespace StoreOfBuild.Domain
 {
-    public class DomainException : System.Exception
+    public class DomainException : Exception
     {
         public DomainException(string error) : base(error)
         {
 
         }
+        
+        public static void When(bool hasError, string error){
 
-        public static void When(bool hasError, string error)
-        {
-            if(!hasError)
+            if(hasError)
                 throw new DomainException(error);
         }
     }

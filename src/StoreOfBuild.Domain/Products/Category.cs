@@ -1,10 +1,10 @@
-namespace StoreOfBuild.Domain.Product
+namespace StoreOfBuild.Domain.Products
 {
-    public class Category
+    public class Category : Entity
     {
-        public int Id { get; private set; }
+        public string Name {get; private set;}
 
-        public string Name { get; private set; }
+        protected Category(){}
 
         public Category(string name)
         {
@@ -18,14 +18,10 @@ namespace StoreOfBuild.Domain.Product
 
         private void ValidateNameAndSetName(string name)
         {
-            DomainException.When(string.IsNullOrEmpty(name), "Name is required.");
+            DomainException.When(string.IsNullOrEmpty(name), "Name is required");
+            DomainException.When(name.Length < 3, "Name invalid");
 
             Name = name;
         }
-
-        
-
     }
-
-
 }

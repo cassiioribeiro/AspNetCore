@@ -1,17 +1,14 @@
-namespace StoreOfBuild.Domain.Product
+namespace StoreOfBuild.Domain.Products
 {
-    public class Product
+    public class Product : Entity
     {
-        public int Id { get; private set; }
-
-        public string Name { get; private set; }
-
-        public Category Category { get; private set; }
-
+        public string Name {get; private set;}
+        public virtual Category Category { get; private set; }
         public decimal Price { get; private set; }
+        public int StockQuantity {get; private set;}
 
-        public int StockQuantity { get; private set; }
-
+        private Product(){}
+        
         public Product(string name, Category category, decimal price, int stockQuantity)
         {
             ValidateValues(name, category, price, stockQuantity);
@@ -34,12 +31,16 @@ namespace StoreOfBuild.Domain.Product
 
         private static void ValidateValues(string name, Category category, decimal price, int stockQuantity)
         {
-            DomainException.When(string.IsNullOrEmpty(name), "Name is required.");
-            DomainException.When(category == null, "Name is required.");
-            DomainException.When(price < 0, "Name is required.");
-            DomainException.When(stockQuantity < 0, "Name is required.");
+            DomainException.When(string.IsNullOrEmpty(name), "Name is required");
+            DomainException.When(category == null, "Category is required");
+            DomainException.When(price < 0, "Prece is required");
+            DomainException.When(stockQuantity < 0, "Stock quantity is required");
         }
 
-    
+        public void RemoveFromStock(int quantity){
+
+            DomainException.When((StockQuantity - quantity) < 0, "Quantity invalid to product stock");
+            StockQuantity -= quantity;
+        }
     }
 }
