@@ -1,0 +1,10 @@
+C:\projeto\src\StoreOfBuild.Data\bin\Debug\netstandard2.0\StoreOfBuild.Data.deps.json
+C:\projeto\src\StoreOfBuild.Data\bin\Debug\netstandard2.0\StoreOfBuild.Data.dll
+C:\projeto\src\StoreOfBuild.Data\bin\Debug\netstandard2.0\StoreOfBuild.Data.pdb
+C:\projeto\src\StoreOfBuild.Data\bin\Debug\netstandard2.0\StoreOfBuild.Domain.dll
+C:\projeto\src\StoreOfBuild.Data\bin\Debug\netstandard2.0\StoreOfBuild.Domain.pdb
+C:\projeto\src\StoreOfBuild.Data\obj\Debug\netstandard2.0\StoreOfBuild.Data.csproj.CoreCompileInputs.cache
+C:\projeto\src\StoreOfBuild.Data\obj\Debug\netstandard2.0\StoreOfBuild.Data.AssemblyInfoInputs.cache
+C:\projeto\src\StoreOfBuild.Data\obj\Debug\netstandard2.0\StoreOfBuild.Data.AssemblyInfo.cs
+C:\projeto\src\StoreOfBuild.Data\obj\Debug\netstandard2.0\StoreOfBuild.Data.dll
+C:\projeto\src\StoreOfBuild.Data\obj\Debug\netstandard2.0\StoreOfBuild.Data.pdb
